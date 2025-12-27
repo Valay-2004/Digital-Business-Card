@@ -1,7 +1,7 @@
 function Body() {
   return (
     <>
-      <div>Body body belongs here</div>
+      <div>Body belongs here</div>
     </>
   );
 }
