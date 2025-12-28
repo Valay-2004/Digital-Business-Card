@@ -14,6 +14,7 @@ function Header() {
         <span className="section_para_info">Computer Science Engineer </span>
         <p
           className="link-for-github"
+          title="Github link as portfolio is not ready yet!"
           /* Change the above className and below link with your portfolio
           when you made it*/
           // Also change the className in index.css file also for styling
