@@ -11,11 +11,12 @@ function Header() {
       />
       <section className="section-info">
         <h2 className="section_name">Valay Bhaladhare</h2>
-        <p className="section_para_info">
-          Cybersecurity Enthusiast | Software Engineer | Web Developer | JAVA{" "}
-        </p>
+        <span className="section_para_info">Computer Science Engineer </span>
         <p
           className="link-for-github"
+          /* Change the above className and below link with your portfolio
+          when you made it*/
+          // Also change the className in index.css file also for styling
           onClick={() => window.open("https://github.com/valay-2004")}
           style={{ cursor: "pointer" }}
         >
@@ -31,8 +32,8 @@ function Header() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
@@ -57,6 +58,7 @@ function Header() {
               width="16"
               height="16"
               viewBox="0 0 24 24"
+              strokeWidth={1.5}
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
