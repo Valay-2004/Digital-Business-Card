@@ -1,19 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-body {
-  height: 100%;
-  background-color: #232020;
-  color: whitesmoke;
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+:root {
+  --card-bg: #1a1b21;
+  --body-bg: #232020;
+  --text-main: #ffffff;
+  --text-sub: #f3bf99; /* Accent color for your title */
+  --footer-bg: #161619;
+  --card-width: 350px;
 }
 
-.App {
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--body-bg);
+  color: var(--text-main);
+  font-family: "Inter", "Playfair Display", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  flex-direction: column;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+/* The Grid container */
+.App {
+  width: var(--card-width);
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden; /*ensure the img corners match the card */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* One single column */
+  /* We don't strictly need grid-template-rows; 
+  the content will define the height naturally */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Header Styling */
+.upper-image {
+  width: 100% !important; /* Forces the Japan image to fill the card top */
+  height: 150px;
+  object-fit: cover; /* Makes the image look cropped rather than squashed */
+}
+
+.section-info {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.section_name {
+  margin: 10px 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.link-for-github {
+  font-size: small;
+  color: teal;
+}
+.section_para_info {
+  color: var(--text-sub);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+/* Flexbox is better for small rows of items (like buttons) */
+.contact-header {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.contact-header a,
+.mailto {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: hsla(216, 12%, 84%, 1);
+  color: black;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-header > *:where(:not(:first-child)) {
+  margin-left: var(--flow-space, 0.7rem);
+}
+
+.contact-header a:last-child {
+  background: hsla(212, 72%, 60%, 1);
+  color: hsla(0, 0%, 100%, 1);
+}
+/* 4. Body Styling */
+.section_body {
+  padding: 0px 38px;
+}
+
+.sec_body_heading1,
+.sec_body_heading2 {
+  font-size: 1rem;
+  margin-bottom: 1.5px;
+}
+
+.sec_body_para1,
+.sec_body_para2 {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+
+/* 5. Footer Styling */
+.section_footer {
+  background-color: var(--footer-bg);
+  padding: 15px 0;
+  margin-top: 5px;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Change icon colors to be subtle */
+.footer_social svg {
+  fill: #918e9b;
+  transition: fill 0.3s;
+}
+
+.footer_social svg:hover {
+  fill: white;
 }
